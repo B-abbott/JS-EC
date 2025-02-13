@@ -1,0 +1,93 @@
+<html>
+    <meta charset="utf-8">
+    <title>js EC</title>
+    <div id="Q1">Question 1: 
+    <script>
+        for( i = 40; i >=10; i-= 2) {
+            document.write(i + " ")
+        }
+    </script>
+    </div>
+    <div id="Q2">Question 2:
+        <script>
+            let x = 0;
+            while (x <= 20) {
+                let userInput = prompt("Give me numbers until we pass 20");
+                let number = Number(userInput);
+                
+                if (isNaN(number)) { 
+                    alert("Please enter a valid number!"); 
+                    continue; 
+                }
+        
+                x += number;
+                document.write(x + " ");
+            }
+        </script>
+    </div>
+    <div id="Q3">Question 3:
+        <script>
+            let numbers = []; 
+            let sum = 0;      
+            while (sum <= 20) {
+                let userInput = prompt("Enter a number:");
+                let number = Number(userInput); 
+
+                if (isNaN(number)) { 
+                    alert("Please enter a valid number!"); 
+                    continue; 
+                }
+
+                numbers.push(number); 
+                sum += number;        
+            }
+
+            document.write("Numbers entered: " + numbers.join(", "));
+        </script>
+    </div>
+    <div id="Q4">Question 4:
+        <script>
+        let songs = {
+        "Hey Jude": "The Beatles",
+        "Bohemian Rhapsody": "Queen",
+        "Hotel California": "Eagles",
+        "Smells Like Teen Spirit": "Nirvana",
+        "Black Hole Sun": "SoundGarden"
+        };
+
+        // Display all songs and their artists
+        document.write("Song List: <br>");
+        for (let song in songs) {
+            document.write(`<p><strong>${song}</strong> - ${songs[song]}</p>`);
+        }
+        </script>
+    </div>
+    <div id="Q5">Question 5:
+        <script>
+        let songs2 = {
+        "Hey Jude": "The Beatles",
+        "Bohemian Rhapsody": "Queen",
+        "Hotel California": "Eagles",
+        "Smells Like Teen Spirit": "Nirvana",
+        "Black Hole Sun": "SoundGarden"
+        };
+        let bandName = prompt("Enter the name of a band:")
+        let foundSongs = [];
+    for (let song in songs2) {
+        if (songs2[song].toLowerCase() === bandName.toLowerCase()) {
+            foundSongs.push(song);
+        }
+    }
+
+    // Display results
+    if (foundSongs.length > 0) {
+        document.write(`<h2>Songs by ${bandName}:</h2>`);
+        document.write("<ul>");
+        foundSongs.forEach(song => document.write(`<li>${song}</li>`));
+        document.write("</ul>");
+    } else {
+        document.write(`<p>No songs found for "${bandName}".</p>`);
+    }
+        </script>
+    </div>
+</html>
